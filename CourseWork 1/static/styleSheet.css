@@ -1,0 +1,11 @@
+/* Ensure window and body take up entire size of viewport */
+html{height:100%; width:100%} 
+body {margin:0; padding:0; height: 100%; width: 100%;}
+
+/* */
+h2 {font-family:Helvetica,Arial,sans-serif; font-size:medium; color:#1ced92; font-style: italic;}
+p {font-family:Helvetica,Arial; font-size:x-small;}
+header {position:relative; background:yellow; border: 2px solid blue; height: 12%; width:100%}
+nav {position:absolute; top:12%; bottom:6%; border: 2px solid red; width:8em; float:left;}
+div#main {position:absolute; border: 2px solid gray;  width:80vw; margin-left:8em; margin-right:0; top:12%; bottom:6%;}
+ul.menuitem {font-size:small; margin:0; padding:2em;}
