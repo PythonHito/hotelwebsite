@@ -6,5 +6,22 @@
        <title>Reviews</title>    	
     </head>  
 <body>
-    <h1>Reviews</h1>
+    <h1>Add a review<h1>
     <a href="/">Back to home</a>
+	
+	<form action="addReview" method="post">
+		<input type="text" name="name" />
+		<input type="textbox" name="content"/>
+		<input type="submit" value="Submit"/>
+	</form>
+	<h1>Reviews</h1>
+    <table>
+	{% for review in reviews %}
+		<tr>
+			<td> {{review.date}} </td>
+			<td> {{review.name}} </td>
+			<td> {{review.content}} </td>
+		</tr>
+	{% endfor %}
+	</table>
+</body>
