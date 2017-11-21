@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>  
+    <head>    
+       <meta http-equiv="Content-type" content="text/html;charset=utf-8" />
+		<link rel = "stylesheet" type = "text/css" href = "/static/styleSheet.css" >
+       <title>Bookings</title>    	
+    </head>  
+	<body>
+		<h1>Bookings</h1>
+		<a href="/">Back to home</a>
+		<form action="addBooking" method="post">
+			<table>	
+				<tr>
+					<td>Name</td>
+					<td><input type="text" name="name"/></td>
+				</tr>
+				<tr>
+					<td>Email</td>
+					<td><input type="email" name="email"/></td>
+				</tr>
+				<tr>
+					<td>Arrival Date</td>
+					<td><input type="date" name="arrivalDate" /></td>
+				</tr>
+				<tr>
+					<td>Departure Date</td>
+					<td><input type="date" name="departureDate" /></td>
+				</tr>
+			</table>
+			<input type="submit" value="Book" />
+		</form>
+	</body>
+</html>
