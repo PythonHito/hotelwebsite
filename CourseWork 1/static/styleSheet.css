@@ -177,6 +177,29 @@ div.black h3 {
     color: white;
     }
     
+table#reviews {
+    width:100%;
+    max-width:100%;
+    table-layout:fixed;
+    }
+table#reviews td {
+    border-right: 2px solid black;
+    border-left: 2px solid black;
+    word-wrap: break-word;
+    }
+    
+table#reviews td.name {
+    width: 15%
+    }
+
+table#reviews td.date {
+width: 25%
+}
+
+table#reviews td.content {
+width: 60%
+}
+    
 
 
 

@@ -4,19 +4,51 @@
 		<meta charset = "utf-8">
 		<title>Reviews</title>
 		<link rel = "stylesheet" type = "text/css" href = "/static/styleSheet.css" >
-		<script src="/static/homepage.js"></script>
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans|Spectral+SC" rel="stylesheet">
 	</head>
+	
 	<body>
 		<div id="wrapper">
 			<header>
-				<p class="white" id="login">login | sign up</p>
+                <a href="login"><p class="white" id="login">login | sign up</p></a>
 				<a href="/"><img id="logo" src="/static/logo.jpg" alt="Logo"></a>
-				<h1>Reviews</h1>
+				<h1>Slightly above average hotel</h1>
 			</header>
 			
 			<div id="main">
-                <a href="javascript:history.back()"><img id="back" src="/static/backButton.png" alt="Back Button"></a>
+				<a href="javascript:history.back()"><img id="back" src="/static/backButton.png" alt="Back Button"></a>      
+                <h2>Add a review</h2>                 
+                    <form action="addReview" method="post">
+                        <table>
+                            <tr>
+                                <td><p>Name:</td>
+                                <td><input type="text" name="name" maxlength="45" required/></td>
+                            </tr>
+                            <tr>
+                                <td><p>Comment:</p></td>
+                                <td><textarea name="content" cols="60" rows="7" maxlength="500" required/></textarea></td>
+                            </tr>
+                            <tr><td><input type="submit" value="Submit"/></td></tr>
+                        </table>
+                    </form>
+                    <h2>Reviews</h2>
+                    <table id="reviews">
+                    {% for review in reviews|reverse %}
+                        <tr>
+                            <td class="date"><p>{{review["date"]}}</p></td>
+                            <td class="name"><p>{{review["name"]}}</p></td>
+                            <td class="content"><p>{{review["content"]}}</p></td>
+                            {% if 'admin' in session %}
+                            <td>
+                                <form action="removeReview" method="post">
+                                    <input type="hidden" value={{loop.index0}} name="index" />
+                                    <input type="submit" value="Remove"/>
+                                </form>
+                            </td>
+                            {% endif %}
+                        </tr>
+                    {% endfor %}
+                    </table>
 			</div>
 			
 			<footer>
