@@ -1,27 +1,34 @@
 <!DOCTYPE html>
-<html>  
-    <head>    
-       <meta http-equiv="Content-type" content="text/html;charset=utf-8" />
+<html>
+	<head>
+		<meta charset = "utf-8">
+		<title>Reviews</title>
 		<link rel = "stylesheet" type = "text/css" href = "/static/styleSheet.css" >
-       <title>Reviews</title>    	
-    </head>  
-<body>
-    <h1>Add a review<h1>
-    <a href="/">Back to home</a>
-	
-	<form action="addReview" method="post">
-		<input type="text" name="name" />
-		<input type="textbox" name="content"/>
-		<input type="submit" value="Submit"/>
-	</form>
-	<h1>Reviews</h1>
-    <table>
-	{% for review in reviews %}
-		<tr>
-			<td> {{review.date}} </td>
-			<td> {{review.name}} </td>
-			<td> {{review.content}} </td>
-		</tr>
-	{% endfor %}
-	</table>
-</body>
+		<script src="/static/homepage.js"></script>
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans|Spectral+SC" rel="stylesheet">
+	</head>
+	<body>
+		<div id="wrapper">
+			<header>
+				<p class="white" id="login">login | sign up</p>
+				<a href="/"><img id="logo" src="/static/logo.jpg" alt="Logo"></a>
+				<h1>Reviews</h1>
+			</header>
+			
+			<div id="main">
+                <a href="javascript:history.back()"><img id="back" src="/static/backButton.png" alt="Back Button"></a>
+			</div>
+			
+			<footer>
+				<div id="contact">
+					<h3 class="grey"> Contact </h3>
+					<table class="grey">
+						<tr> <td> Email </td> <td> slightlyabovehotel@gmail.com </td> </tr>
+						<tr> <td> Home </td> <td> 12345 123456 </td> </tr>
+						<tr> <td> Mobile </td> <td> 12345678910 </td> </tr>
+					</table>
+				</div>
+			</footer>
+		</div>
+	</body>
+</html>

@@ -1,11 +1,183 @@
 /* Ensure window and body take up entire size of viewport */
-html{height:100%; width:100%} 
-body {margin:0; padding:0; height: 100%; width: 100%;}
+html,
+body {
+	margin:0; 
+	padding:0; 
+	height: 100%; 
+	width: 100%;
+	}
 
-/* */
-h2 {font-family:Helvetica,Arial,sans-serif; font-size:medium; color:#1ced92; font-style: italic;}
-p {font-family:Helvetica,Arial; font-size:x-small;}
-header {position:relative; background:yellow; border: 2px solid blue; height: 12%; width:100%}
-nav {position:absolute; top:12%; bottom:6%; border: 2px solid red; width:8em; float:left;}
-div#main {position:absolute; border: 2px solid gray;  width:80vw; margin-left:8em; margin-right:0; top:12%; bottom:6%;}
-ul.menuitem {font-size:small; margin:0; padding:2em;}
+/* Default margins to 0 and define font*/
+p, h1, h2, h3, ul{-webkit-margin-before:0; -webkit-margin-after:0; font-family:'Spectral SC', serif; }
+
+/* Define main component positions */
+header {
+	height: 12em; 
+	width: 100%; 
+	min-width: 60em;
+	}
+div#wrapper {
+	min-height: 100%; 
+	position: relative;
+	min-width: 60em;
+	}
+div#main {
+	padding-bottom: 8em; 
+	}
+footer {
+	position: absolute; 
+	width: 100%; 
+	height: 8em; 
+	bottom: 0;
+	}
+
+/* Styling for header */
+header {
+	background:black;
+	}
+h1 {
+	font-size: 33pt;
+	display: inline-block; 
+	vertical-align: middle; 
+	margin-left: 1em;
+	color: white;
+	}
+img#logo {
+	max-width: 100%; 
+	height: 10em;
+	display: inline-block; 
+	vertical-align: middle;
+	margin-left: 1em; 
+	margin-bottom: 1em; 
+	margin-top: 1em
+	}
+
+p#login {
+    width:99%;
+    position: absolute;
+    text-align: right;
+    padding:0;
+    }
+	
+img#back{
+	height: 2em;
+	margin: 0.5em;
+	padding: 5px;
+	margin-bottom: 0;
+	border: 2px solid black;
+	}
+
+/* Footer styling */
+footer {
+	background: black;
+	}
+
+footer p, h3, ul {
+    color: grey;
+    }
+    
+footer table {
+    padding-left: 0.6em;
+    padding-right: 0.6em;
+    }
+
+/* Styling for text elements */
+h2 {
+	font-size:xx-large;
+    padding-left: 0.6em;
+    padding-right: 0.6em;
+    padding-bottom: 0.5em;
+    padding-top: 0.5em;
+	}
+
+h3 {
+font-size:x-large;
+padding-left: 0.6em;
+padding-right: 0.6em;
+padding-bottom: 0.25em;
+padding-top: 0.25em;
+}
+
+p {
+	font-size: medium;
+    padding-left: 0.6em;
+    padding-right: 0.6em;
+    padding-bottom: 0.5em;
+    padding-top: 0.5em;
+	}
+
+.white {
+    color:white; 
+    }
+
+.black {
+    color:black; 
+    }
+
+.grey {
+    color:grey; 
+    }
+    
+/* Styling for divider elements */
+div.black{
+    background: black;
+	width:100%; 
+    max-height:100%;
+    }
+
+div.white{
+	width:100%; 
+    max-height:100%;
+    background: white;
+    }
+    
+div.btw {
+    width: 100%; 
+    min-width: 100%; 
+    height: 1.5em; 
+    background:linear-gradient(black, white);
+    clear:both;
+    }
+div.wtb {
+    width: 100%; 
+    min-width: 100%; 
+    height: 1.5em; 
+    background:linear-gradient(white, black);
+    clear:both;
+    }
+    
+/* Home page body styling */
+img#imageGallery {
+	max-width:100%;
+	margin-top: 0;
+	margin-bottom: 0;
+	}
+
+div#book {
+	background: white;
+	text-align: center;
+	vertical-align: middle;
+	padding: 1.5em;
+	}
+
+/* Local attractions body styling */
+img.attractions {
+    width: 90%;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    padding-left: 5%;
+    padding-right: 5%;
+    }
+
+div.white h3 {   
+    color: black;
+    }
+ 
+div.black h3 {
+    color: white;
+    }
+    
+
+
+
+
