@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset = "utf-8">
+		<title>Slightly above average hotel dot com</title>
+		<link rel = "stylesheet" type = "text/css" href = "/static/styleSheet.css" >
+		<script src="/static/homepage.js"></script>
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans|Spectral+SC" rel="stylesheet">
+	</head>
+	
+	<body>
+		<div id="wrapper">
+			<header>
+				{% if "email" in session %}
+				<a href="logout"><p class="white" id="login">Hello, {{session["email"]}} | Log out</p></a>
+				{% else %}
+				<a href="login"><p class="white" id="login">login | sign up</p></a>
+				{% endif %}
+				<img id="logo" src="/static/logo.jpg" alt="Logo">
+				<h1>Slightly above average hotel</h1>
+			</header>
+			
+			<div id="main">
+				<div class ="white">
+					<h2 class="black">Welcome to the slightly above average hotel!</h2>
+				</div>
+				
+                <div class="wtb"></div>
+				<div class="black">
+					<img id="imageGallery" src onerror='swapImages()' alt="Sliding gallery">
+				</div>
+                <div class="btw"></div>
+                
+				<div id="book">
+					<a href="bookings"><img id="book" src="/static/book.png" alt="Check bookings or book a room"></a> 
+				</div>
+               
+                <div class="wtb"></div>
+				<div class="black">
+					<h2 class="white"> About us </h2>
+					<p class="white">	
+						Performed suspicion in certainty so frankness by attention pretended. Newspaper or in tolerably education enjoyment. 
+						Extremity excellent certainty d	iscourse sincerity no he so resembled. Joy house worse arise total boy but. Elderly up chicken do at feeling is.
+						Like seen drew no make fond at on rent. 
+						Behaviour extremely her explained situation yet september gentleman are who. Is thought or pointed hearing he.
+						Up am intention on dependent questions oh elsewhere september. 
+						No betrayed pleasure possible jointure we in throwing. And can event rapid any shall woman green. 
+					</p>
+					<p class="white">
+						Hope they dear who its bred. Smiling nothing affixed he carried it clothes calling he no. 
+						Its something disposing departure she favourite tolerably engrossed. 
+						Truth short folly court why she their balls. Excellence put unaffected reasonable mrs introduced conviction she.
+						Nay particular delightful but unpleasant for uncommonly who. 
+					</p>
+					<p class="white">
+						By so delight of showing neither believe he present. Deal sigh up in shew away when. Pursuit express no or prepare replied. 
+						Wholly formed old latter future but way she. Day her likewise smallest expenses judgment building man carriage gay. 
+						Considered introduced themselves mr to discretion at. Means among saw hopes for. Death mirth in oh learn he equal on. 
+					</p>
+					<p class="white">
+						Believing neglected so so allowance existence departure in. In design active temper be uneasy. 
+						Thirty for remove plenty regard you summer though. He preference connection astonished on of ye. 
+						Partiality on or continuing in particular principles as. Do believing oh disposing to supported allowance we. ipiscing habitant cubilia at suscipit nostra ac ultrices sem phasellus.
+					</p>
+				</div>
+                <div class="btw"></div>
+                
+                <div class="white">
+                    <h3 class="black">Why don't you check out the <a href="attractions"><h2>Local attractions...</h2></a></h3>
+                    <h3 class="black">Or see our <a href="reviews"><h2>Reviews...</h2></a></h3>
+                </div>
+			</div>
+			
+			<footer>
+				<div id="contact">
+					<h3 class="grey"> Contact </h3>
+					<table class="grey">
+						<tr> <td> Email </td> <td> slightlyabovehotel@gmail.com </td> </tr>
+						<tr> <td> Home </td> <td> 12345 123456 </td> </tr>
+						<tr> <td> Mobile </td> <td> 12345678910 </td> </tr>
+					</table>
+				</div>
+			</footer>
+		</div>
+	</body>
+</html>

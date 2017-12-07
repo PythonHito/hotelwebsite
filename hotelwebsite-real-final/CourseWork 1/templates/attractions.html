@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset = "utf-8">
+		<title>Local attractions</title>
+		<link rel = "stylesheet" type = "text/css" href = "/static/styleSheet.css" >
+		<script src="/static/homepage.js"></script>
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans|Spectral+SC" rel="stylesheet">
+	</head>
+
+	<body>
+		<div id="wrapper">
+			<header>
+				{% if "email" in session %}
+				<a href="logout"><p class="white" id="login">Hello, {{session["email"]}} | Log out</p></a>
+				{% else %}
+				<a href="login"><p class="white" id="login">login | sign up</p></a>
+				{% endif %}
+				<a href="/"><img id="logo" src="/static/logo.jpg" alt="Logo"></a>
+				<h1>Local attractions</h1>
+			</header>
+			
+			<div id="main">
+                <div class="white">
+					<a href="javascript:history.back()"><img id="back" src="/static/backButton.png" alt="Back Button"></a>
+                    <img class="attractions" src="/static/localAttractions/uea.jpg" alt="Check bookings or book a room">
+                    <h3 class="attractions">
+                        UEA: Of recommend residence education be on difficult repulsive offending. 
+                        Judge views had mirth table seems great him for her. Alone all happy asked
+                        begin fully stand own get. Excuse ye seeing result of we. See scale dried songs 
+                        old may not. Promotion did disposing you household any instantly. 
+                        Hills we do under times at first short an.  
+                        </h3>
+                </div>
+                
+                <div class="wtb"></div>
+                <div class="black">
+                    <img class="attractions" src="/static/localAttractions/eye.jpg" alt="Check bookings or book a room">
+                    <h3 class="attractions">
+                        Eye Of Sauron: Situation admitting promotion at or to perceived be. Mr acuteness we as estimable
+                        enjoyment up. An held late as felt know. Learn do allow solid to grave. Middleton
+                        suspicion age her attention. Chiefly several bed its wishing. Is so moments on chamber
+                        pressed to. Doubtful yet way properly answered humanity its desirous. Minuter believe 
+                        service arrived civilly add all. Acuteness allowance an at eagerness favourite in extensive 
+                        exquisite ye.
+                    </h3>
+                </div>
+                <div class="btw"></div>
+                
+                <div class="white">
+                    <img class="attractions" src="/static/localAttractions/wall.jpg" alt="Check bookings or book a room">
+                    <h3 class="attractions">
+                        A brick wall: Sudden she seeing garret far regard. By hardly it direct if pretty up regret. Ability thought
+                        enquire settled prudent you sir. Or easy knew sold on well come year. Something consulted age 
+                        extremely end procuring. Collecting preference he inquietude projection me in by. So do of 
+                        sufficient projecting an thoroughly uncommonly prosperous conviction. Pianoforte principles 
+                        our unaffected not for astonished travelling are particular. 
+                    </h3>
+                </div>
+			</div>
+			
+			<footer>
+				<div id="contact">
+					<h3 class="grey"> Contact </h3>
+					<table class="grey">
+						<tr> <td> Email </td> <td> slightlyabovehotel@gmail.com </td> </tr>
+						<tr> <td> Home </td> <td> 12345 123456 </td> </tr>
+						<tr> <td> Mobile </td> <td> 12345678910 </td> </tr>
+					</table>
+				</div>
+			</footer>
+		</div>
+	</body>
+</html>
